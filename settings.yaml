@@ -1,0 +1,350 @@
+# IOC device settings, YAML
+# With exception of 'general', each top level key defines a new ioc for that device
+general:
+  prefix: TGT:MEOP
+  log_dir: 'logs'   # path of logs directory
+  #epics_addr_list: '129.57.86.255'  # In Hall B
+  epics_addr_list: '127.255.255.255'  # On experimental equipment network
+  #epics_beacon_addr_list: '127.255.255.255'
+  delay: 0.5
+pfeiffer-26x_1:
+  module: 'devices.tpg_26x'
+  autostart: True
+  ip: '129.57.37.103'
+  port: '1001'            # channel 1 of serial to ethernet
+  timeout: 2
+  delay: 5
+  channels:
+    - Outlet_PI
+    - OVC_PI
+  records:
+    Outlet_PI:
+      DESC: 'Outlet Pressure'
+      PREC: 2
+      EGU: 'mbar'
+      HIHI: 1300
+      HIGH: 1200
+      LOW: -100
+      LOLO: -150
+    OVC_PI:
+      DESC: 'Magnet OVC Pressure'
+      PREC: 2
+      EGU: 'mbar'
+      HIHI: 1300
+      HIGH: 1200
+      LOW: -100
+      LOLO: -150
+
+pfeiffer-26x_2:
+  module: 'devices.tpg_26x'
+  autostart: True
+  ip: '129.57.37.103'
+  port: '1002'            # channel 2 of serial to ethernet
+  timeout: 2
+  delay: 5
+  channels:
+    - Inlet_PI
+  records:
+    Inlet_PI:
+      DESC: 'Inlet Pressure'
+      PREC: 2
+      EGU: 'mbar'
+      HIHI: 1300
+      HIGH: 1200
+      LOW: -100
+      LOLO: -150
+si9700:
+  module: 'devices.si9700'
+  autostart: True
+  ip: '129.57.37.103'
+  port: '1003'            # channel 3 of serial to ethernet
+  timeout: 2
+  delay: 5
+  channels:
+    - Liquifier
+    - None
+  records:
+    Liquifier_TI:
+      DESC: 'Temperature from Liquifier Controller'
+      PREC: 4
+      EGU: 'K'
+      HIHI: 310
+      HIGH: 300
+      LOW: 2
+      LOLO: 1
+    Liquifier_Heater:
+      DESC: 'Heater Percentage'
+      PREC: 1
+      EGU: '%'
+      HIHI: 100
+      HIGH: 95
+      LOW: -1
+      LOLO: -2
+    Liquifier_SP:
+      DESC: 'Setpoint from Liquifier Controller'
+      PREC: 3
+      EGU: 'K'
+      HIHI: 300
+      HIGH: 275
+      LOW: 2
+      LOLO: 1
+    Liquifier_Mode:
+      DESC: 'Heater Mode from Liquifier Controller'
+
+lakeshore_218:
+  module: 'devices.ls218'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '129.57.37.111'
+  port: '1002'    # channel 1 of serial to ethernet
+  timeout: 2
+  delay: 10
+  channels: # List of PV names for each read channel of 218 in order
+    - Reservoir_TI
+    - None
+    - None
+    - None
+    - OVC_TI
+    - Shield_TI
+    - None
+    - None
+  records:
+    Reservoir_TI:
+      DESC: 'Temperature of Magnet Reservoir'
+      PREC: 2
+      EGU: 'K'
+      HIHI: 310
+      HIGH: 300
+      LOW: 2
+      LOLO: 1
+    Shield_TI:
+      DESC: 'Temperature of Magnet Shield'
+      PREC: 2
+      EGU: 'K'
+      HIHI: 310
+      HIGH: 300
+      LOW: 2
+      LOLO: 1
+    OVC_TI:
+      DESC: 'Temperature of Magnet OVC'
+      PREC: 2
+      EGU: 'K'
+      HIHI: 310
+      HIGH: 300
+      LOW: 2
+      LOLO: 1
+rigol_dp832:
+  module: 'devices.dp832'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '192.168.1.32'
+  port: '5555'
+  timeout: 2
+  delay: 5
+  voltage_limit: 30.0
+  channels: # List of channel names in order. None indicates unused channel.
+    - Reservoir_Heater
+    - Shield_Heater
+  records:
+dat8018:
+  module: 'devices.dat8018'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '129.57.37.116'
+  port: '502'
+  timeout: 2
+  delay: 5
+  channels: # List of channel names in order. None indicates unused channel.
+    - One_TI
+    - Two_TI
+    - Three_TI
+    - Four_TI
+    - Five_TI
+    - Six_TI
+    - Seven_TI
+    - Eight_TI
+  records:
+    One_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Two_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Three_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Four_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Five_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Six_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Seven_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+    Eight_TI:
+      DESC: 'TC'
+      PREC: 2
+      EGU: 'C'
+      HIHI: 200
+      HIGH: 180
+      LOW: 2
+      LOLO: 1
+lm500:
+  module: 'devices.lm500'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '129.57.37.111'
+  port: '1003'    # channel 1 of serial to ethernet
+  timeout: 2
+  delay: 10
+  channels:
+    - Magnet_LI
+  records:
+    Magnet_LI:
+      DESC: 'Magnet Level Probe Reading'
+      PREC: 2
+      EGU: 'cm'
+      HIHI: 65
+      HIGH: 64
+      LOW: 40
+      LOLO: 36
+cm4g_magnet:
+  module: 'devices.cm4g_magnet'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '129.57.37.81'
+  port: '4444'    # channel 1 of serial to ethernet
+  timeout: 2
+  delay: 2
+  channels:
+    - Magnet
+  records:
+    Magnet_VI:
+      DESC: 'Magnet Lead Voltage'
+      PREC: 3
+      EGU: 'V'
+      HIHI: 10
+      HIGH: 8
+      LOW: -8
+      LOLO: -10
+    Magnet_Coil_CI:
+      DESC: 'Magnet Coil Current'
+      PREC: 3
+      EGU: 'A'
+      HIHI: 85
+      HIGH: 83
+      LOW: -1
+      LOLO: -2
+    Magnet_Lead_CI:
+      DESC: 'Magnet Lead Current'
+      PREC: 3
+      EGU: 'A'
+      HIHI: 85
+      HIGH: 83
+      LOW: -1
+      LOLO: -2
+    Magnet_ULIM:
+      DESC: 'Magnet Upper Current Limit'
+      PREC: 3
+      EGU: 'A'
+      HIHI: 85
+      HIGH: 83
+      LOW: -83
+      LOLO: -85
+    Magnet_LLIM:
+      DESC: 'Magnet Lower Current Limit'
+      PREC: 3
+      EGU: 'A'
+      HIHI: 85
+      HIGH: 83
+      LOW: -83
+      LOLO: -85
+dat8024:
+  module: 'devices.dat8024'
+  autostart: True          # Should IOC Manager try to start this?
+  ip: '129.57.37.132'
+  port: '502'
+  timeout: 2
+  delay: 5
+  channels: # List of channel names in order. None indicates unused channel.
+    - Voltage1_VC
+    - None
+    - None
+    - None
+  records:
+    Voltage1_VC:
+      DESC: 'DAC Output 1'
+      PREC: 3
+      EGU: 'V'
+      DRVH: 5
+      DRVL: 0
+      HIHI: 6
+      HIGH: 5.5
+      LOW: -1
+      LOLO: -2
+dat8017_i:
+  module: 'devices.dat8017'
+  autostart: True
+  ip: '129.57.37.137'
+  port: '502'
+  timeout: 2
+  delay: 5
+  channels: # List of PV names for each read channel of datexel in order
+    - Bottle_PI
+  calibration: # psi gauge range for calibration
+    Bottle_PI: 3000
+  records:
+    Bottle_PI:
+      DESC: 'Bottle Pressure'
+      PREC: 3
+      EGU: 'psi'
+      HIHI: 2600
+      HIGH: 2500
+      LOW: 50
+      LOLO: 10
+mks937b:
+    module: 'devices.mks937b'
+    autostart: False          # Should IOC Manager try to start this?
+    ip: '192.168.1.107'
+    port: '1001'            # channel 3 of serial to ethernet
+    address: '003'          # serial address set on device, must be 3 digits
+    timeout: 2
+    delay: 2
+    channels:
+        - OVC_CC_PI
+        - None
+        - OVC_Pirani_PI

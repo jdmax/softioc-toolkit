@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-10 11:55:44 by poltar-->
+<display version="2.0.0">
+  <name>Liquifier Status</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>MEOP Magnet Liquifier Status</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Outlet Pressure:</text>
+    <y>80</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>ca://TGT:MEOP:Outlet_PI</pv_name>
+    <x>120</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Inlet Pressure:</text>
+    <y>110</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>ca://TGT:MEOP:Inlet_PI</pv_name>
+    <x>120</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Outlet IOC:</text>
+    <x>300</x>
+    <y>50</y>
+    <width>130</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Inlet IOC:</text>
+    <x>300</x>
+    <y>110</y>
+    <width>130</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>ca://TGT:MEOP:MAN:pfeiffer-26x_1_control</pv_name>
+    <x>440</x>
+    <y>50</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>ca://TGT:MEOP:MAN:pfeiffer-26x_2_control</pv_name>
+    <x>440</x>
+    <y>110</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>ca://TGT:MEOP:MAN:pfeiffer-26x_1_hb</pv_name>
+    <x>560</x>
+    <y>50</y>
+    <width>60</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>ca://TGT:MEOP:MAN:pfeiffer-26x_2_hb</pv_name>
+    <x>560</x>
+    <y>110</y>
+    <width>60</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>ca://TGT:MEOP:MAN:si9700_hb</pv_name>
+    <x>560</x>
+    <y>160</y>
+    <width>60</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_2</name>
+    <pv_name>ca://TGT:MEOP:MAN:si9700_control</pv_name>
+    <x>440</x>
+    <y>160</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Temp Control IOC:</text>
+    <x>300</x>
+    <y>160</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>ca://TGT:MEOP:Liquifier_TI</pv_name>
+    <x>120</x>
+    <y>160</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Liquifier Temp:</text>
+    <y>160</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>ca://TGT:MEOP:MAN:lakeshore_218_hb</pv_name>
+    <x>560</x>
+    <y>310</y>
+    <width>60</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_3</name>
+    <pv_name>ca://TGT:MEOP:MAN:lakeshore_218_control</pv_name>
+    <x>440</x>
+    <y>310</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>LS 218 IOC:</text>
+    <x>300</x>
+    <y>310</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>ca://TGT:MEOP:Reservoir_TI</pv_name>
+    <x>120</x>
+    <y>310</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Magnet Reservoir:</text>
+    <y>310</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>ca://TGT:MEOP:OVC_TI</pv_name>
+    <x>120</x>
+    <y>370</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Magnet OVC:</text>
+    <y>370</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>ca://TGT:MEOP:Shield_TI</pv_name>
+    <x>120</x>
+    <y>340</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Magnet Shield:</text>
+    <y>340</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_20</name>
+    <pv_name>ca://TGT:MEOP:MAN:lm500_hb</pv_name>
+    <x>560</x>
+    <y>450</y>
+    <width>60</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_5</name>
+    <pv_name>ca://TGT:MEOP:MAN:lm500_control</pv_name>
+    <x>440</x>
+    <y>450</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>Level IOC:</text>
+    <x>300</x>
+    <y>450</y>
+    <width>130</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>ca://TGT:MEOP:Magnet_LI</pv_name>
+    <x>120</x>
+    <y>450</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>Level:</text>
+    <y>450</y>
+    <width>130</width>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Progress Bar</name>
+    <pv_name>ca://TGT:MEOP:Magnet_LI</pv_name>
+    <x>120</x>
+    <y>470</y>
+    <limits_from_pv>false</limits_from_pv>
+    <maximum>64.0</maximum>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>OVC Pressure:</text>
+    <y>50</y>
+    <width>150</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>ca://TGT:MEOP:OVC_PI</pv_name>
+    <x>120</x>
+    <y>50</y>
+    <format>2</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Bottle IOC:</text>
+    <x>300</x>
+    <y>400</y>
+    <width>130</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_4</name>
+    <pv_name>ca://TGT:MEOP:MAN:dat8017_i_control</pv_name>
+    <x>440</x>
+    <y>400</y>
+    <width>90</width>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>ca://TGT:MEOP:MAN:dat8017_i_hb</pv_name>
+    <x>560</x>
+    <y>400</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>Bottle Pressure:</text>
+    <y>400</y>
+    <width>150</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_13</name>
+    <pv_name>ca://TGT:MEOP:Bottle_PI</pv_name>
+    <x>120</x>
+    <y>400</y>
+    <precision>0</precision>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_14</name>
+    <pv_name>ca://TGT:MEOP:Liquifier_Heater</pv_name>
+    <x>120</x>
+    <y>190</y>
+    <precision>1</precision>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Liquifier Heater:</text>
+    <y>190</y>
+    <width>130</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Liquifier Setpoint:</text>
+    <y>220</y>
+    <width>130</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Liquifier Mode:</text>
+    <y>250</y>
+    <width>130</width>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>ca://TGT:MEOP:Liquifier_Mode</pv_name>
+    <x>120</x>
+    <y>250</y>
+    <width>110</width>
+    <height>20</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>ca://TGT:MEOP:Liquifier_SP</pv_name>
+    <x>120</x>
+    <y>220</y>
+    <precision>3</precision>
+  </widget>
+</display>
