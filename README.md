@@ -21,7 +21,8 @@ A Python-based EPICS IOC (Input/Output Controller) framework for scientific inst
 - **Pfeiffer**: TPG 26x vacuum gauges
 - **MKS**: 937B pressure controllers
 - **Zaber**: Motor controllers
-- **Custom**: LM-500 level probe, AMI 136 level monitor
+- **American Magnetics**: AMI 136 level monitor
+- **Cryomagnetics**: LM-500 level probe
 
 ## Quick Start
 
