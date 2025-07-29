@@ -11,7 +11,7 @@ A Python-based EPICS IOC (Input/Output Controller) framework for scientific inst
 - **GUI Integration**: CS-Studio/Phoebus display files included
 - **IOC Management**: Centralized control of multiple IOC instances
 
-## Supported Devices
+## Example Devices
 
 - **Datexel**: Modbus I/O modules (8017 ADC, 8018 Thermocouple, 8024 DAC, 8130 Relay)
 - **Lakeshore**: Temperature controllers (218, 336)
