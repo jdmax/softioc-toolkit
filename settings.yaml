@@ -5,6 +5,25 @@ general:
   log_dir: 'logs'   # path of logs directory
   epics_addr_list: 'None'
   delay: 0.5
+status:   # SoftIOC to switch between target states
+    module: 'devices.status_ioc'
+    autostart: True
+    delay: 1
+    prod_pv: True   # turn on production status PV
+    full_status:    # list of PVs that indicate full state when all not alarming
+        - TGT:BTARG:Cell_Top_TI
+        - TGT:BTARG:Cell_Bottom_TI
+        - TGT:BTARG:Target_Supply_PI
+archiver:
+  module: 'devices.archiver'
+  autostart: True
+  archive_path: 'archive/data'  # Directory to store archived data
+  settings_file: 'settings.yaml'  # Path to settings file (optional)
+  deadband: 0.01  # 1% relative change threshold
+  time_increment: 300  # Force write every 5 minutes even if no change
+  delay: 5  # Delay between status updates
+  channels:
+    - None
 pfeiffer-26x_1:
   module: 'devices.tpg_26x'
   autostart: True
@@ -346,3 +365,25 @@ mks937b:
         - OVC_CC_PI
         - None
         - OVC_Pirani_PI
+zaber:
+    module: 'devices.zaber_motor'
+    autostart: True
+    ip: '192.168.1.40'
+    port: '55551'
+    timeout: 1
+    delay: 5
+    channels:   # list of "axes" in order. None indicates unused channel.
+        - Shutoff
+        - None
+        - Flag
+    locations:    # dict of preset locations (name then degrees from home) defaults for each channel
+        Shutoff:
+            - [Open, 1440]
+            - [Closed, 0]
+        Flag:
+            - [Empty, 21]
+            - [Cu-Sn, -6]
+            - [Carbon, 52]
+    check_home:    # should it run the home routine before each move
+        Shutoff: False
+        Flag: True
