@@ -1,11 +1,9 @@
 # IOC device settings, YAML
 # With exception of 'general', each top level key defines a new ioc for that device
 general:
-  prefix: TGT:MEOP
+  prefix: MYLAB
   log_dir: 'logs'   # path of logs directory
-  #epics_addr_list: '129.57.86.255'  # In Hall B
-  epics_addr_list: '127.255.255.255'  # On experimental equipment network
-  #epics_beacon_addr_list: '127.255.255.255'
+  epics_addr_list: 'None'
   delay: 0.5
 pfeiffer-26x_1:
   module: 'devices.tpg_26x'
