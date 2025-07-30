@@ -84,9 +84,3 @@ Written in 2023-2025 by J. Maxwell (https://orcid.org/0000-0003-2710-4646).
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## Requirements
-
-- Python 3.7+
-- EPICS Base
-- softioc Python package
-- See `requirements.txt` for complete list
