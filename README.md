@@ -16,13 +16,12 @@ A Python-based EPICS IOC (Input/Output Controller) framework for scientific inst
 - **Datexel**: Modbus I/O modules (8017 ADC, 8018 Thermocouple, 8024 DAC, 8130 Relay)
 - **Lakeshore**: Temperature controllers (218, 336)
 - **Scientific Instruments**: SI9700 temperature controller
-- **Cryomagnetics**: CS-4 and CM4G magnet power supplies
+- **Cryomagnetics**: CS-4 and CM4G magnet power supplies, LM-500 level probe
 - **Rigol**: DP832 power supply
 - **Pfeiffer**: TPG 26x vacuum gauges
 - **MKS**: 937B pressure controllers
 - **Zaber**: Motor controllers
 - **American Magnetics**: AMI 136 level monitor
-- **Cryomagnetics**: LM-500 level probe
 
 ## Quick Start
 
