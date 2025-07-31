@@ -107,8 +107,7 @@ si9700:
       LOLO: 1
     Liquifier_Mode:
       DESC: 'Heater Mode from Liquifier Controller'
-
-lakeshore_218:
+lakeshore_218:   # Lakeshore RS232: 7 data bits, Odd parity, 1 stop bit
   module: 'devices.ls218'
   autostart: True          # Should IOC Manager try to start this?
   ip: '129.57.37.111'
