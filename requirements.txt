@@ -5,4 +5,3 @@ numpy
 screenutils
 pyModbusTCP~=0.3.0
 simple_pid
-supervisor
