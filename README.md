@@ -1,6 +1,6 @@
 # EPICS IOC Framework
 
-A Python-based EPICS IOC (Input/Output Controller) framework for scientific instrumentation control and data acquisition. Designed for physics experiments requiring integration of multiple devices including temperature controllers, pressure gauges, power supplies, and motor controllers.
+A Python-based EPICS IOC (Input/Output Controller) framework for scientific instrumentation control and data acquisition using pythonSoftIOC from the [Diamond Light Source](https://diamondlightsource.github.io/pythonSoftIOC/master/index.html). Designed for physics experiments requiring integration of multiple devices including temperature controllers, pressure gauges, power supplies, and motor controllers.
 
 ## Features
 
@@ -79,6 +79,7 @@ The built-in archiver automatically logs PV values to CSV files when:
 
 ## Author
 Written in 2023-2025 by J. Maxwell (https://orcid.org/0000-0003-2710-4646).
+
 
 ## License
 
